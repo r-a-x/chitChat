@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TagEditor from './components/TagEditor';
 import QuestionBox from './components/QuestionBox';
 import Home from './components/Home';
+import Expert from './components/Expert';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={TagEditor} />
           <Route path="/topics" component={QuestionBox} />
+          <Route path="/expert" component={Expert} />
           {/* <a
             className="App-link"
             href="https://reactjs.org"

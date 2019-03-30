@@ -33,7 +33,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <span className="input-group-btn">
-                <Link to="/about"> Expert </Link>
+                <Link to="/expert"> Expert </Link>
                 
                 </span>
                 <br/>
