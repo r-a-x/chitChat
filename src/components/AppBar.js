@@ -12,11 +12,15 @@ const sectionListStyle = {
     'flex-direction': 'row',
     'flex-wrap': 'wrap',
     'justify-content': 'flex-end',
+    'list-style-type': 'none',
     margin: 0
 };
 
 const sectionListItemStyle = {
-    'flex-basis': ''
+    'flex-basis': 'auto',
+    'margin': '10px',
+    'margin-left': '40px',
+    'margin-right': '40px'
 };
 class AppBar extends Component {
 
@@ -33,10 +37,10 @@ class AppBar extends Component {
             </div>
             <div className = "sectionList">
                 <ul className = "header" style = {sectionListStyle}>
-                    <li>
+                    <li style = {sectionListItemStyle}>
                         <a href="about">About</a>
                     </li>
-                    <li>
+                    <li style = {sectionListItemStyle}>
                         <a href="faq">FAQ</a>
                     </li>
                 </ul>
