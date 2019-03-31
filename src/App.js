@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
-import TagEditor from './components/TagEditor';
-import QuestionBox from './components/QuestionBox';
-import logo from './logo.svg';
 import './App.css';
+import AppBar from './components/AppBar';
 
+const screen1Style = {
+  width: '100%',
+  height: '100vh',
+  background: 'lightblue'
+};
+
+const screen2Style = {
+  width: '100%',
+  height: '100vh',
+  background: 'pink'
+};
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          {/* <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a> */}
-          {/* <TagEditor/> */}
-          <QuestionBox/>
-        </header>
+        {/* <header className="App-header">
+        </header> */}
+        {/* <QuestionBox/> */}
+        <div >
+            <AppBar/>
+            <div className = "screen1" style = {screen1Style}>
+            </div>
+            <div className = "screen2" style = {screen2Style}>
+            </div>
+            <div className = "screen3">
+            </div>
+        </div>
       </div>
     );
   }
