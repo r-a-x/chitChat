@@ -3,6 +3,8 @@ import TagEditor from './components/TagEditor';
 import QuestionBox from './components/QuestionBox';
 import Home from './components/Home';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Switch } from 'react-router-dom'
+
 import './App.css';
 import AppBar from './components/AppBar';
 
@@ -23,14 +25,16 @@ class App extends Component {
       <Router>
       <div className="App">
             <AppBar/>
-            <div className = "screen1" style = {screen1Style}>
+            <Switch>
               <Route exact path="/" component = {Home}/>
+              <Route path="/about" component = {TagEditor}/>
+              <Route path="/topics" component={QuestionBox}/>
+            </Switch>
+            <div className = "screen1" style = {screen1Style}>
             </div>
             <div className = "screen2" style = {screen2Style}>
-              <Route path="/about" component = {TagEditor}/>
             </div>
             <div className = "screen3">
-              <Route path="/topics" component={QuestionBox}/>
             </div>
           </div>
       </Router>

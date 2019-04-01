@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const appBarStyle = {
     height: '50px',
@@ -9,18 +10,18 @@ const appBarStyle = {
 
 const sectionListStyle = {
     display: 'flex',
-    'flex-direction': 'row',
-    'flex-wrap': 'wrap',
-    'justify-content': 'flex-end',
-    'list-style-type': 'none',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
+    listStyleType: 'none',
     margin: 0
 };
 
 const sectionListItemStyle = {
-    'flex-basis': 'auto',
-    'margin': '10px',
-    'margin-left': '40px',
-    'margin-right': '40px'
+    flexBasis: 'auto',
+    margin: '10px',
+    marginLeft: '40px',
+    marginRight: '40px'
 };
 class AppBar extends Component {
 
@@ -38,10 +39,10 @@ class AppBar extends Component {
             <div className = "sectionList">
                 <ul className = "header" style = {sectionListStyle}>
                     <li style = {sectionListItemStyle}>
-                        <a href="about">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                     <li style = {sectionListItemStyle}>
-                        <a href="faq">FAQ</a>
+                        <Link to="/faq">FAQ</Link>
                     </li>
                 </ul>
             </div>
